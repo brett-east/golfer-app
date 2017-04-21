@@ -15,7 +15,6 @@ class GolferSearch extends React.Component {
     	<div>
         <form>
           <input type="search" ref="searchText" placeholder="Filter by player name" onChange={this.handleSearch}/>
-          <button className="button">Search</button>
         </form>
       </div>
     );

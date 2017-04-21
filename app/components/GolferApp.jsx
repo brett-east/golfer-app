@@ -55,6 +55,7 @@ class GolferApp extends React.Component {
         <div className="row">
           <div className="column small-centered small-12 medium-8 large-8">
             <div className="container">
+              <h1 className="page-heading">Golfer Profile App</h1>
               <GolferSearch onSearch={this.handleSearch}/>
               <GolferList players={filteredGolfers}/>
             </div>
