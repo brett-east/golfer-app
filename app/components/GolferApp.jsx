@@ -36,14 +36,14 @@ class GolferApp extends React.Component {
       if (searchText.length < 1) {
         return true;
       }
-      return player.name.toLowerCase().indexOf(searchText) >= 0;
+      return player.name.toLowerCase().indexOf(searchText.toLowerCase()) >= 0;
     });
     return filteredGolfers;
   }
 
   handleSearch(searchText) {
     this.setState({
-      searchText: searchText.toLowerCase()
+      searchText
     });
   }
 
