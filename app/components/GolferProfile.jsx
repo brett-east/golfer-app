@@ -7,20 +7,20 @@ class GolferProfile extends React.Component {
   render() {
     var {name, age, nationality, fedexPoints, fedexRank, careerEarnings} = this.props;
     return (
-    	<div className="golfer-profile row">
+    	<section className="golfer-profile row">
         <div className="small-12 columns">
-          <p><strong>{name}</strong></p>
+          <h1>{name}</h1>
         </div>
         <div className="small-6 columns">
-          <p>Age: {age}</p>
-          <p>FedEx Points: {fedexPoints}</p>
-          <p>Career Earnings: ${careerEarnings}</p>
+          <p><strong>Age:</strong> {age}</p>
+          <p><strong>FedEx Points:</strong>  {fedexPoints}</p>
+          <p><strong>Career Earnings:</strong>  ${careerEarnings}</p>
         </div>
         <div className="small-6 columns">
-          <p>Nationality: {nationality}</p>
-          <p>FedEx Rank: {fedexRank}</p>
+          <p><strong>Nationality:</strong>  {nationality}</p>
+          <p><strong>FedEx Rank:</strong>  {fedexRank}</p>
         </div>
-      </div>
+      </section>
     );
   }
 }
