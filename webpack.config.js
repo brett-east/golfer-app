@@ -31,7 +31,8 @@ module.exports = {
       GolferAPI: 'app/api/GolferAPI.js',
       applicationStyles: 'app/styles/app.scss',
       actions: 'app/actions/actions.js',
-      reducers: 'app/reducers/reducers.js'
+      reducers: 'app/reducers/reducers.js',
+      configureStore: 'app/store/configureStore.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
