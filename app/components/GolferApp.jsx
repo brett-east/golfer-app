@@ -2,6 +2,7 @@ import React from 'react';
 
 import GolferSearch from 'GolferSearch';
 import GolferList from 'GolferList';
+import {filterGolfers} from 'GolferAPI';
 
 class GolferApp extends React.Component {
   constructor(props) {
@@ -30,17 +31,6 @@ class GolferApp extends React.Component {
     this.handleSearch = this.handleSearch.bind(this);
   }
 
-  filterGolfers(players, searchText) {
-    var filteredGolfers = players;
-    filteredGolfers = filteredGolfers.filter((player) => {
-      if (searchText.length < 1) {
-        return true;
-      }
-      return player.name.toLowerCase().indexOf(searchText.toLowerCase()) >= 0;
-    });
-    return filteredGolfers;
-  }
-
   handleSearch(searchText) {
     this.setState({
       searchText
@@ -49,7 +39,7 @@ class GolferApp extends React.Component {
 
   render() {
     var {players, searchText} = this.state;
-    var filteredGolfers = this.filterGolfers(players, searchText);
+    var filteredGolfers = filterGolfers(players, searchText);
     return (
   		<div>
         <div className="row">

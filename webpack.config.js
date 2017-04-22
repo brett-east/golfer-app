@@ -28,6 +28,7 @@ module.exports = {
     ],
     alias: {
       app: 'app',
+      GolferAPI: 'app/api/GolferAPI.js',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
