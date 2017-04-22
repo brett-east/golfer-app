@@ -9,13 +9,6 @@ import GolferApp from 'GolferApp';
 import * as actions from 'actions';
 var store = require('configureStore').configure();
 
-store.subscribe(() => {
-    console.log('New state', store.getState());
-});
-
-store.dispatch(actions.setSearchText('bub'));
-store.dispatch(actions.setSearchText('Jord'));
-
 // Load foundation
 $(document).foundation();
 

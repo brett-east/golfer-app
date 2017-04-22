@@ -1,15 +1,18 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import GolferProfile from 'GolferProfile';
+import {filterGolfers} from 'GolferAPI';
 
-class GolferList extends React.Component {
+export class GolferList extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    var {players} = this.props;
+    var {players, searchText} = this.props;
     var renderProfiles = () => {
-      return players.map((player) => {
+      var filteredPlayers = filterGolfers(players, searchText);
+      return filteredPlayers.map((player) => {
         return <GolferProfile key={player.id} {...player}/>
       });
     }
@@ -21,4 +24,9 @@ class GolferList extends React.Component {
   }
 }
 
-export default GolferList;
+export default connect((state) => {
+  return {
+    players: state.players,
+    searchText: state.searchText
+  };
+})(GolferList);
