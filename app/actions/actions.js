@@ -4,3 +4,10 @@ export var setSearchText = (searchText) => {
     searchText
   };
 };
+
+export var getPlayers = (players) => {
+  return {
+    type: 'GET_PLAYERS',
+    players
+  };
+};

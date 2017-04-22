@@ -32,7 +32,9 @@ module.exports = {
       applicationStyles: 'app/styles/app.scss',
       actions: 'app/actions/actions.js',
       reducers: 'app/reducers/reducers.js',
-      configureStore: 'app/store/configureStore.jsx'
+      configureStore: 'app/store/configureStore.jsx',
+      rankedPlayers: 'app/api/rankedPlayers.js',
+      rankedJson: 'app/api/rankedPlayers.json'
     },
     extensions: ['', '.js', '.jsx']
   },

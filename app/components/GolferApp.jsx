@@ -4,17 +4,6 @@ import GolferSearch from 'GolferSearch';
 import GolferList from 'GolferList';
 import {filterGolfers} from 'GolferAPI';
 
-import * as actions from 'actions';
-var store = require('configureStore').configure();
-
-store.subscribe(() => {
-    console.log('New state', store.getState());
-});
-
-store.dispatch(actions.setSearchText('bub'));
-store.dispatch(actions.setSearchText('Jord'));
-
-
 class GolferApp extends React.Component {
   constructor(props) {
     super(props);

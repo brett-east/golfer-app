@@ -6,7 +6,7 @@ var rankings = require('./rankings');
 var players = require('./players');
 
 var rankedPlayers = [];
-var fileDestination = path.join(__dirname, 'rankedPlayers.json');
+var fileDestination = path.join(__dirname, 'rankedPlayers.js');
 
 rankings.players.forEach((ranked) => {
   players.players.forEach((player) => {
