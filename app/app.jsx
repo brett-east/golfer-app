@@ -1,7 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 import {Provider} from 'react-redux';
-var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
 import GolferApp from 'GolferApp';
 

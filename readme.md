@@ -13,3 +13,7 @@ This app doesn't do a whole lot other than display a list of the top 100 golfers
 ## Setup
 
 To setup the project, clone the repo and run `yarn install` to get all the dependencies. Then run `webpack` to build the bundle file (don't actually have to do this, the bundle file is included). `yarn run test` will run the karma tests.
+
+## Hosted on Heroku
+
+[http://tranquil-springs-32665.herokuapp.com/]
