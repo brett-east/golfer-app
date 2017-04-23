@@ -1,6 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-class GolferProfile extends React.Component {
+export class GolferProfile extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -25,4 +26,4 @@ class GolferProfile extends React.Component {
   }
 }
 
-export default GolferProfile;
+export default connect()(GolferProfile);

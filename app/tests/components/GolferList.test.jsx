@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 import expect from 'expect';
 import TestUtils from 'react-addons-test-utils';
 
-
-import {GolferList} from 'GolferList';
-import GolferProfile from 'GolferProfile';
+import {configure} from 'configureStore';
+import ConnectedGolferList, {GolferList} from 'GolferList';
+import ConnectedGolferProfile, {GolferProfile} from 'GolferProfile';
 
 describe('GolferList', () => {
   it('should exist', () => {
@@ -13,9 +14,7 @@ describe('GolferList', () => {
   });
 
   it('should render one GolferProfile for each player', () => {
-    var state = {
-      searchText: '',
-      players: [{
+    var players = [{
       first_name: 'Bubba',
       last_name: 'Watson',
       age: 33,
@@ -34,13 +33,19 @@ describe('GolferList', () => {
       fedexRank: 4,
       careerEarnings: 134123,
       id: 234
-    }]
-  }
+    }];
 
-    var golferList = TestUtils.renderIntoDocument(<GolferList {...state}/>);
-    var golferComponents = TestUtils.scryRenderedComponentsWithType(golferList, GolferProfile);
+    var store = configure({players});
+    var provider = TestUtils.renderIntoDocument(
+      <Provider store={store}>
+        <ConnectedGolferList/>
+      </Provider>
+    )
 
-    expect(golferComponents.length).toBe(state.players.length);
+    var golferList = TestUtils.scryRenderedComponentsWithType(provider, ConnectedGolferList)[0];
+    var golferComponents = TestUtils.scryRenderedComponentsWithType(golferList, ConnectedGolferProfile);
+
+    expect(golferComponents.length).toBe(players.length);
 
   });
 
