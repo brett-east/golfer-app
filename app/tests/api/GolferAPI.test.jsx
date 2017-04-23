@@ -6,7 +6,8 @@ import {filterGolfers} from 'GolferAPI';
 describe('GolferAPI', () => {
 
   var players = [{
-    name: 'Bubba Watson',
+    first_name: 'Bubba',
+    last_name: 'Watson',
     age: 33,
     nationality: 'USA',
     fedexPoints: -230,
@@ -15,7 +16,8 @@ describe('GolferAPI', () => {
     id: 123
   },
   {
-    name: 'Jordan Speith',
+    first_name: 'Jordan',
+    last_name: 'Speith',
     age: 27,
     nationality: 'USA',
     fedexPoints: -230,
