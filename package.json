@@ -6,7 +6,7 @@
   "scripts": {
     "test": "karma start",
     "build": "webpack",
-    "start": "npm build && node server"
+    "start": "npm run build && node server"
   },
   "author": "Brett East",
   "license": "MIT",
