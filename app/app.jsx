@@ -12,7 +12,7 @@ var store = require('configureStore').configure();
 $(document).foundation();
 
 // App.css
-require('style!css!sass!applicationStyles');
+require('applicationStyles');
 
 ReactDOM.render(
   <Provider store={store}>
